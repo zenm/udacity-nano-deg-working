@@ -12,4 +12,11 @@ def check_profanity(text_to_check):
     output = connection.read()
     # print(output)
     connection.close()
+    if 'true' in output:
+        print('Profane')
+    elif 'false' in output:
+        print('No Profane!')
+    else:
+        print("Couldn't read the document.")
+
 read_text()
